@@ -1,29 +1,58 @@
 <?php
-// Start the session
 session_start();
+
 require_once 'models/UserModel.php';
+require_once 'utils.php';
+
 $userModel = new UserModel();
+$id = isset($_GET['id']) ? custom_decrypt($_GET['id']) : null;
 
-$user = NULL; //Add new user
-$_id = NULL;
-
-if (!empty($_GET['id'])) {
-    $_id = $_GET['id'];
-    $user = $userModel->findUserById($_id);//Update existing user
+// Kiểm tra xem ID đã được giải mã thành công hay chưa
+if ($id === null || !is_numeric($id)) {
+    // Chuyển hướng nếu ID không hợp lệ
+    header('Location: list_users.php');
+    exit;
 }
 
+$user = $userModel->findUserById($id);
 
-if (!empty($_POST['submit'])) {
+// Kiểm tra xem người dùng có tồn tại không
+if (!$user) {
+    // Chuyển hướng nếu không tìm thấy người dùng
+    header('Location: list_users.php');
+    exit;
+}
 
-    if (!empty($_id)) {
-        $userModel->updateUser($_POST);
-    } else {
-        $userModel->insertUser($_POST);
+// Biến để lưu thông báo lỗi
+$errors = [];
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Lấy dữ liệu từ form
+    $name = trim($_POST['name']);
+    $password = trim($_POST['password']);
+
+    // Xác thực tên
+    if (empty($name)) {
+        $errors[] = "Name is required.";
+    } elseif (!preg_match('/^[A-Za-z0-9]{5,15}$/', $name)) {
+        $errors[] = "Name must be 5 to 15 characters long and can only contain letters and numbers.";
     }
-    header('location: list_users.php');
-}
 
+    // Xác thực mật khẩu
+    if (empty($password)) {
+        $errors[] = "Password is required.";
+    } elseif (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*()]).{5,10}$/', $password)) {
+        $errors[] = "Password must be 5 to 10 characters long, including at least one lowercase letter, one uppercase letter, one digit, and one special character.";
+    }
+
+    // Nếu không có lỗi, thực hiện hành động như lưu người dùng
+    if (empty($errors)) {
+        // Thực hiện cập nhật thông tin người dùng tại đây
+        // Bạn có thể gọi đến phương thức updateUser trong UserModel để lưu thông tin
+    }
+}
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,31 +60,31 @@ if (!empty($_POST['submit'])) {
     <?php include 'views/meta.php' ?>
 </head>
 <body>
-    <?php include 'views/header.php'?>
+    <?php include 'views/header.php' ?>
     <div class="container">
 
-            <?php if ($user || !isset($_id)) { ?>
-                <div class="alert alert-warning" role="alert">
-                    User form
-                </div>
-                <form method="POST">
-                    <input type="hidden" name="id" value="<?php echo $_id ?>">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input class="form-control" name="name" placeholder="Name" value='<?php if (!empty($user[0]['name'])) echo $user[0]['name'] ?>'>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" class="form-control" placeholder="Password">
-                    </div>
+        <?php if (!empty($errors)) { ?>
+            <div class="alert alert-danger" role="alert">
+                <?php foreach ($errors as $error) { echo htmlspecialchars($error) . "<br>"; } ?>
+            </div>
+        <?php } ?>
 
-                    <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
-                </form>
-            <?php } else { ?>
-                <div class="alert alert-success" role="alert">
-                    User not found!
-                </div>
-            <?php } ?>
+        <div class="alert alert-warning" role="alert">
+            User form
+        </div>
+        <form method="POST">
+            <input type="hidden" name="id" value="<?php echo htmlspecialchars($user[0]['id']); ?>">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" name="name" placeholder="Name" value='<?php echo htmlspecialchars($user[0]['name']); ?>'>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Password">
+            </div>
+
+            <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 </body>
 </html>
