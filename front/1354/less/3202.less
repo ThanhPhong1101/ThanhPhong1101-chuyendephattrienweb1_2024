@@ -1,0 +1,113 @@
+.vc_row {
+    display: flex;
+    justify-content: center; /* Canh giữa theo chiều ngang */
+    align-items: center;    /* Canh giữa theo chiều dọc */
+    height: 100vh;          /* Chiều cao toàn trang */
+    padding: 0 10%;         /* Cách trái phải một khoảng vừa */
+    background-color: #f2f2f2; /* Nền nhẹ cho toàn trang */
+    flex-wrap: wrap;
+
+    .vc_column-inner {
+        background-color: #fff; /* Nền trắng cho form */
+        color: #333; /* Chữ đen */
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .vc_toggle {
+        margin-bottom: 15px;
+
+        &.vc_toggle_default {
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+            overflow: hidden;
+
+            .vc_toggle_title {
+                background-color: #fff;
+                cursor: pointer;
+                padding: 10px 15px;
+                font-size: 18px;
+                font-weight: 600;
+                color: #333;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                i.vc_toggle_icon {
+                    font-size: 18px;
+                    color: #333;
+                    transition: transform 0.2s ease;
+                }
+
+                &:hover {
+                    background-color: #f7f7f7;
+                }
+            }
+
+            .vc_toggle_content {
+                padding: 15px;
+                background-color: #fff;
+                display: none; /* Ẩn nội dung ban đầu */
+
+                p {
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    color: #666;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            /* Hiển thị nội dung khi toggle được mở */
+            &.vc_toggle_active .vc_toggle_content {
+                display: block;
+            }
+
+            /* Đổi dấu cộng thành dấu trừ khi mở */
+            &.vc_toggle_active .vc_toggle_title i.vc_toggle_icon {
+                transform: rotate(45deg);
+            }
+        }
+
+        &.vc_toggle_color_accent {
+            border-color: #3498db;
+
+            .vc_toggle_title {
+                background-color: #3498db;
+                color: #fff;
+
+                &:hover {
+                    background-color: #2980b9;
+                }
+
+                i.vc_toggle_icon {
+                    color: #fff;
+                }
+            }
+        }
+
+        &.vc_toggle_size_md {
+            .vc_toggle_title {
+                font-size: 16px;
+            }
+
+            .vc_toggle_content {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+/* Dấu cộng khi chưa mở */
+.vc_toggle_default .vc_toggle_title i.vc_toggle_icon::before {
+    content: '+';
+}
+
+/* Dấu trừ khi mở */
+.vc_toggle_active .vc_toggle_title i.vc_toggle_icon::before {
+    content: '-';
+}

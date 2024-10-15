@@ -1,0 +1,88 @@
+.vc_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10%;
+  background-color: #f2f2f2;
+  flex-wrap: wrap;
+}
+.vc_row .vc_column-inner {
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.vc_row .vc_toggle {
+  margin-bottom: 15px;
+}
+.vc_row .vc_toggle.vc_toggle_default {
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.vc_row .vc_toggle.vc_toggle_default .vc_toggle_title {
+  background-color: #fff;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.vc_row .vc_toggle.vc_toggle_default .vc_toggle_title i.vc_toggle_icon {
+  font-size: 18px;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+.vc_row .vc_toggle.vc_toggle_default .vc_toggle_title:hover {
+  background-color: #f7f7f7;
+}
+.vc_row .vc_toggle.vc_toggle_default .vc_toggle_content {
+  padding: 15px;
+  background-color: #fff;
+  display: none;
+}
+.vc_row .vc_toggle.vc_toggle_default .vc_toggle_content p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+.vc_row .vc_toggle.vc_toggle_default .vc_toggle_content:last-child {
+  margin-bottom: 0;
+}
+.vc_row .vc_toggle.vc_toggle_default.vc_toggle_active .vc_toggle_content {
+  display: block;
+}
+.vc_row .vc_toggle.vc_toggle_default.vc_toggle_active .vc_toggle_title i.vc_toggle_icon {
+  transform: rotate(45deg);
+}
+.vc_row .vc_toggle.vc_toggle_color_accent {
+  border-color: #3498db;
+}
+.vc_row .vc_toggle.vc_toggle_color_accent .vc_toggle_title {
+  background-color: #3498db;
+  color: #fff;
+}
+.vc_row .vc_toggle.vc_toggle_color_accent .vc_toggle_title:hover {
+  background-color: #2980b9;
+}
+.vc_row .vc_toggle.vc_toggle_color_accent .vc_toggle_title i.vc_toggle_icon {
+  color: #fff;
+}
+.vc_row .vc_toggle.vc_toggle_size_md .vc_toggle_title {
+  font-size: 16px;
+}
+.vc_row .vc_toggle.vc_toggle_size_md .vc_toggle_content {
+  font-size: 14px;
+}
+.vc_toggle_default .vc_toggle_title i.vc_toggle_icon::before {
+  content: '+';
+}
+.vc_toggle_active .vc_toggle_title i.vc_toggle_icon::before {
+  content: '-';
+}
