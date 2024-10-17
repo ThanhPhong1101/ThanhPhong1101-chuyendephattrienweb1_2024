@@ -41,7 +41,7 @@ $url_path = str_replace('\\', '/', $url_path);
                     </div>
                     <div class="form-group">
                         <label for="contact_form_comment"><strong>Message</strong></label>
-                        <textarea class="form-control" id="contact_form_comment" name="Message" rows="5"
+                        <textarea class="form-control message-input" id="contact_form_comment" name="Message" rows="5"
                             required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary"><strong>Submit</strong></button>

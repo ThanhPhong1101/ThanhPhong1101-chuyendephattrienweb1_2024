@@ -17,7 +17,6 @@ $url_path = str_replace('\\', '/', $url_path);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
     <div class="container">
         <div class="row">
@@ -33,19 +32,16 @@ $url_path = str_replace('\\', '/', $url_path);
                     <div class="vc_toggle_title">
                         <h4>How did my package ship?</h4>
                         <span class="toggle-icon">+</span>
-
                     </div>
                     <div class="vc_toggle_content">
                         <p>Complexion-perfecting natural foundation enriched with antioxidant-packed superfruits,
                             vitamins, and other skin-nourishing nutrients...</p>
                     </div>
                 </div>
-
                 <div class="vc_toggle vc_toggle_active">
                     <div class="vc_toggle_title">
                         <h4>Why does my USPS tracking number state 1-Day, 2-Day, 3-Day Delivery?</h4>
                         <span class="toggle-icon">+</span>
-
                     </div>
                     <div class="vc_toggle_content">
                         <p>Complexion-perfecting natural foundation enriched with antioxidant-packed superfruits,
@@ -53,7 +49,6 @@ $url_path = str_replace('\\', '/', $url_path);
                             matte finish for soft, velvety smooth skin.</p>
                     </div>
                 </div>
-
                 <div class="vc_toggle vc_toggle_active">
                     <div class="vc_toggle_title">
                         <h4>How long will my package take to arrive?</h4>
@@ -64,48 +59,40 @@ $url_path = str_replace('\\', '/', $url_path);
                             vitamins, and other skin-nourishing nutrients...</p>
                     </div>
                 </div>
-
                 <div class="vc_toggle vc_toggle_active">
                     <div class="vc_toggle_title">
                         <h4>What are business days?</h4>
                         <span class="toggle-icon">+</span>
-
                     </div>
                     <div class="vc_toggle_content">
                         <p>Complexion-perfecting natural foundation enriched with antioxidant-packed superfruits,
                             vitamins, and other skin-nourishing nutrients...</p>
                     </div>
                 </div>
-
                 <div class="vc_toggle vc_toggle_active">
                     <div class="vc_toggle_title">
                         <h4>How do I know my package has shipped?</h4>
                         <span class="toggle-icon">+</span>
-
                     </div>
                     <div class="vc_toggle_content">
                         <p>Complexion-perfecting natural foundation enriched with antioxidant-packed superfruits,
                             vitamins, and other skin-nourishing nutrients...</p>
                     </div>
                 </div>
-
                 <div class="vc_toggle vc_toggle_active">
                     <div class="vc_toggle_title">
                         <h4>Why are certain products unavailable to ship Internationally?</h4>
                         <span class="toggle-icon">+</span>
-
                     </div>
                     <div class="vc_toggle_content">
                         <p>Complexion-perfecting natural foundation enriched with antioxidant-packed superfruits,
                             vitamins, and other skin-nourishing nutrients...</p>
                     </div>
                 </div>
-
                 <div class="vc_toggle vc_toggle_active">
                     <div class="vc_toggle_title">
                         <h4>Why is my tracking number not updating?</h4>
                         <span class="toggle-icon">+</span>
-
                     </div>
                     <div class="vc_toggle_content">
                         <p>Complexion-perfecting natural foundation enriched with antioxidant-packed superfruits,
@@ -115,7 +102,6 @@ $url_path = str_replace('\\', '/', $url_path);
             </div>
         </div>
     </div>
-
     <script>
         document.querySelectorAll('.vc_toggle_title').forEach(title => {
             title.addEventListener('click', () => {
@@ -134,12 +120,10 @@ $url_path = str_replace('\\', '/', $url_path);
                 }
             });
         });
-
         // Đặt trạng thái ban đầu cho tất cả các nội dung
         document.querySelectorAll('.vc_toggle_content').forEach(content => {
             content.style.display = "none"; // Ẩn tất cả các nội dung khi bắt đầu
         });
     </script>
 </body>
-
 </html>
