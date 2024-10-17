@@ -8,6 +8,7 @@ $url_path = str_replace('\\', '/', $url_path);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@ $url_path = str_replace('\\', '/', $url_path);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -59,7 +61,7 @@ $url_path = str_replace('\\', '/', $url_path);
                 </div>
                 <div class="well-bg">
                     <div class="well-inner">
-                        <div class="widget-address"><i class="fa fa-clock-o"></i>
+                        <div class="widget-schedule"><i class="fa fa-clock-o"></i>
                             <h2><strong>Schedule</strong></h2>
                             Mon - Fri: 9am - 6pm<br>
                             Sat: Holiday<br>
@@ -69,7 +71,7 @@ $url_path = str_replace('\\', '/', $url_path);
                 </div>
                 <div class="well-bg">
                     <div class="well-inner">
-                        <div class="widget-address"><i class="fa fa-phone"></i>
+                        <div class="widget-phone"><i class="fa fa-phone"></i>
                             <h2><strong>Phone</strong></h2>
                             Office: 8100-123-456<br>
                             Mobile: 8100-456-789

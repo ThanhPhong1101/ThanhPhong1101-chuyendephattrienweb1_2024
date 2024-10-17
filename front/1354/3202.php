@@ -27,28 +27,7 @@ $less->compileFile('less/3202.less', 'css/3202.css'); // Biên dịch file LESS 
 
 <body>
     <?php include './3202-content.php'; ?>
-    <!-- Bootstrap JS (Optional) -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Lấy tất cả các tiêu đề accordion
-            const toggleTitles = document.querySelectorAll('.vc_toggle_title');
-
-            // Lặp qua từng tiêu đề và thêm sự kiện click
-            toggleTitles.forEach(title => {
-                title.addEventListener('click', function () {
-                    // Lấy phần tử cha .vc_toggle
-                    const toggle = this.parentElement;
-
-                    // Toggle class .vc_toggle_active
-                    toggle.classList.toggle('vc_toggle_active');
-                });
-            });
-        });
-
-    </script>
     <!-- Thêm file JS -->
-    <script src="../js.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
