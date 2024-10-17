@@ -1,0 +1,31 @@
+.vc_toggle {
+  margin-bottom: 20px;
+}
+.vc_toggle.vc_toggle_active .vc_toggle_title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+.vc_toggle.vc_toggle_active .vc_toggle_title h4 {
+  margin: 0;
+  color: #000;
+  font-size: 18px;
+}
+.vc_toggle.vc_toggle_active .vc_toggle_title .toggle-icon {
+  font-size: 14px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.vc_toggle.vc_toggle_active .vc_toggle_title .toggle-icon.active {
+  transform: rotate(45deg);
+}
+.vc_toggle.vc_toggle_active .vc_toggle_content {
+  border: none;
+  padding: 10px;
+  background-color: transparent;
+}

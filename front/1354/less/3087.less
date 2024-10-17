@@ -1,0 +1,79 @@
+@background-color: #f8f9fa;
+@text-color: #7c8182;
+@input-bg-color: #fefefd;
+@input-border-color: #edebe3;
+@btn-primary-bg-color: #dc3545;
+@btn-primary-border-color: @btn-primary-bg-color;
+@btn-primary-hover-bg-color: darken(@btn-primary-bg-color, 10%);
+@well-bg-color: #f9f8f4;
+@well-inner-bg-color: #fff;
+@well-box-shadow-color: rgba(231, 229, 222, 1);
+@icon-color: #c45d3c;
+
+/* Định dạng cho input và textarea */
+input.form-control,
+textarea.form-control {
+    background-color: @input-bg-color;
+    border-radius: 4px;
+    border: 2px solid @input-border-color;
+    color: @text-color;
+}
+
+/* Cấu hình cho button */
+.btn-primary {
+    background-color: @btn-primary-bg-color !important;
+    border-color: @btn-primary-border-color !important;
+    border-radius: 5px;
+    color: white;
+
+    &:hover {
+        background-color: @btn-primary-hover-bg-color !important;
+        border-color: @btn-primary-border-color !important;
+    }
+}
+
+/* Định dạng tiêu đề */
+h1, h2 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 46px;
+    color: #222;
+}
+
+h2 {
+    font-size: 16px !important;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+/* Định dạng cho các khối nội dung */
+.well-bg {
+    background-color: @well-bg-color;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.well-inner {
+    background-color: @well-inner-bg-color;
+    padding: 30px;
+    box-shadow: 0 0 3px 0 @well-box-shadow-color;
+}
+
+/* Định dạng cho các icon */
+.widget-address i,
+.widget-schedule i,
+.widget-phone i {
+    font-size: 18px;
+    color: @icon-color;
+    float: left;
+    margin-right: 15px;
+    margin-top: 4px;
+}
+
+/* Định dạng cho tiêu đề widget */
+.widget-title {
+    font-size: 18px;
+}

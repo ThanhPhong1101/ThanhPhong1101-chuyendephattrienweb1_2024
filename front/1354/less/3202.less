@@ -1,0 +1,41 @@
+@main-color: #000;
+
+.vc_toggle {
+    margin-bottom: 20px; // Khoảng cách giữa các câu hỏi
+
+    &.vc_toggle_active {
+
+        .vc_toggle_title {
+            display: flex;
+            justify-content: space-between; // Căn giữa giữa tiêu đề và biểu tượng
+            cursor: pointer;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); // Bóng đổ phía dưới
+
+            h4 {
+                margin: 0;
+                color: @main-color; // Màu chữ tiêu đề
+                font-size: 18px;
+            }
+
+            .toggle-icon {
+                font-size: 14px;
+                margin-left: 10px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+
+                &.active {
+                    transform: rotate(45deg); // Hiệu ứng xoay cho biểu tượng khi mở
+                }
+            }
+        }
+
+        .vc_toggle_content {
+            border: none;
+            padding: 10px;
+            background-color: transparent;
+        }
+    }
+}

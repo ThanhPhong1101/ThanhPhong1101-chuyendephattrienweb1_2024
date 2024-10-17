@@ -1,0 +1,53 @@
+input.form-control,
+textarea.form-control {
+  background-color: #fefefd;
+  border-radius: 4px;
+  border: 2px solid #edebe3;
+  color: #7c8182;
+}
+.btn-primary {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  border-radius: 5px;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #bd2130 !important;
+  border-color: #dc3545 !important;
+}
+h1,
+h2 {
+  font-weight: 500;
+}
+h1 {
+  font-size: 32px;
+  line-height: 46px;
+  color: #222;
+}
+h2 {
+  font-size: 16px !important;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.well-bg {
+  background-color: #f9f8f4;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.well-inner {
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 0 3px 0 #e7e5de;
+}
+.widget-address i,
+.widget-schedule i,
+.widget-phone i {
+  font-size: 18px;
+  color: #c45d3c;
+  float: left;
+  margin-right: 15px;
+  margin-top: 4px;
+}
+.widget-title {
+  font-size: 18px;
+}

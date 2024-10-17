@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        #contact-section {
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .widget-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .well-bg {
+            background-color: #e9ecef;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 5px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+
+        /* Điều chỉnh chiều rộng cho các textbox */
+        .short-input {
+            max-width: 300px;
+            /* Thiết lập chiều rộng tối đa */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="contact-section" class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Get In Touch With Fixit</h1>
+                <p>Simply complete the enquiry form &amp; We will respond as soon as we can.</p>
+                <form action="/theme/phone-repair/contact-us/#wpcf7-f485-p484-o1" method="post"
+                    aria-label="Contact form" novalidate="novalidate">
+                    <div class="form-group">
+                        <label for="contact_form_fname">Name<span class="required">*</span></label>
+                        <input type="text" class="form-control short-input" id="contact_form_fname" name="Name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact_form_email">Email<span class="required">*</span></label>
+                        <input type="email" class="form-control short-input" id="contact_form_email" name="Email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact_form_subject">Subject</label>
+                        <input type="text" class="form-control short-input" id="contact_form_subject" name="Subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact_form_comment">Message</label>
+                        <textarea class="form-control" id="contact_form_comment" name="Message" rows="5"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <div class="well-bg">
+                    <h2 class="widget-title"><i class="fa fa-home"></i> Address</h2>
+                    <p>136 Kingston Road<br>SW19 1LY,<br>Wimbledon London.</p>
+                </div>
+                <div class="well-bg">
+                    <h2 class="widget-title"><i class="fa fa-clock-o"></i> Schedule</h2>
+                    <ul>
+                        <li>Mon - Fri: 9am - 6pm</li>
+                        <li>Sat: Holiday</li>
+                        <li>Sun: Appointments only.</li>
+                    </ul>
+                </div>
+                <div class="well-bg">
+                    <h2 class="widget-title"><i class="fa fa-phone"></i> Phone</h2>
+                    <ul>
+                        <li>Office: 8100-123-456</li>
+                        <li>Mobile: 8100-456-789</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
