@@ -8,20 +8,17 @@ $url_path = str_replace('\\', '/', $url_path);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
     <div class="container">
         <div class="row">
-            <!-- 2 Cột chứa form -->
             <div class="col-md-8">
                 <h1><strong>Get In Touch With Fixit</strong></h1>
                 <p>Simply complete the enquiry form &amp; We will respond as soon as we can.</p>
@@ -47,7 +44,6 @@ $url_path = str_replace('\\', '/', $url_path);
                     <button type="submit" class="btn btn-primary"><strong>Submit</strong></button>
                 </form>
             </div>
-            <!-- Cột chứa Address, Schedule, Phone -->
             <div class="col-md-4">
                 <div class="well-bg">
                     <div class="well-inner">
@@ -82,5 +78,4 @@ $url_path = str_replace('\\', '/', $url_path);
         </div>
     </div>
 </body>
-
 </html>
